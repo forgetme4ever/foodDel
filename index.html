@@ -1,41 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Food Delivery</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header-box">
-                    <div class="header-logo logo">
-                        <img src="/images/logo.png" alt="img: logo">
-                    </div>
-                    <div class="header-controls">controls</div>
-                </div>
+      <header class="header">
+        <div class="container">
+          <div class="header-box">
+            <div class="header-logo logo">
+              <img src="/images/logo.png" alt="img: logo" />
             </div>
-
-        </header>
-        <main class="main">
-<div class="container">
-    cont
-</div>
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-box">
-                    <div class="footer-logo logo">
-                        <img src="/images/logo.png" alt="img: logo">
-                    </div>
-                    <div class="footer-nav">2</div>
-                    <div class="footer-social">3</div>
-                </div>
+            <div class="header-controls">
+              <button class="btn btn-primary">
+                <img src="/images/items/user.png" alt="img: user" />
+                Sign in
+              </button>
+              <button class="btn btn-outline">
+                <img src="/images/items/cart.svg" alt="img: cart" />
+                Cart
+              </button>
             </div>
-        </footer>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="banner">
+          <div class="container">
+            <div class="banner-item">
+              <h2 class="banner-item--title">Online service food delivery</h2>
+              <p class="banner-item--subtitle">
+                Food from your favorite restaurant will be delivered by courier
+                in gloves. masks and anticeptic
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="products">
+          <div class="container">
+            <div class="products-header">
+                <h3 class="products-header--title">
+Restaurants
+                </h3>
+                <input type="text" class="products-header--search" placeholder="Search restaurant or food">
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-box">
+            <div class="footer-logo logo">
+              <img src="/images/logo.png" alt="img: logo" />
+            </div>
+            <div class="footer-nav">
+              <ul>
+                <li>Restaurants</li>
+                <li>Couriers</li>
+                <li>Press</li>
+                <li>Contacts</li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <img src="/images/social/insta.svg" alt="img: insta" />
+              <img src="/images/social/facebook.svg" alt="img: facebook" />
+              <img src="/images/social/vk.svg" alt="img: vk" />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
