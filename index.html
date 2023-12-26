@@ -10,7 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="scripts/index.js" defer></script>
     <title>Food Delivery</title>
   </head>
   <body>
@@ -18,15 +19,15 @@
       <header class="header">
         <div class="container">
           <div class="header-box">
-            <div class="header-logo logo">
+            <a href='index.html' class="header-logo logo">
               <img src="/images/logo.png" alt="img: logo" />
-            </div>
+            </a>
             <div class="header-controls">
               <button class="btn btn-primary">
                 <img src="/images/items/user.png" alt="img: user" />
                 Sign in
               </button>
-              <button class="btn btn-outline">
+              <button class="btn btn-outline" id='cart-button'>
                 <img src="/images/items/cart.svg" alt="img: cart" />
                 Cart
               </button>
@@ -54,15 +55,172 @@ Restaurants
                 </h3>
                 <input type="text" class="products-header--search" placeholder="Search restaurant or food">
             </div>
+            <div class="products-wrapper" id="rests-container">
+                
+                <div class="products-card">
+                    <div class="products-card__image">
+<img src="/images/rests/tanuki.jpg" alt="img: tanuki">
+                    </div>
+                    <div class="products-card__description">
+                        <div class="products-card__description-row">
+                            <h4 class="products-card__description--title">Tanuki</h4>
+                            <div class="products-card__description--badge">50 min</div>
+                        </div>
+                        <div class="products-card__description-row">
+                           <div class="products-card__description-info">
+                            <div class="products-card__description-info--rating">
+                                <img src="/images/items/star.svg" alt="icon: star">
+                                4.5
+                            </div>
+                            <div class="products-card__description-info--price">From $20</div>
+                            <div class="products-card__description-info--group">Sushi</div>
+
+                           </div>
+                        </div>                    </div>
+                </div>
+                <div class="products-card">
+                    <div class="products-card__image">
+<img src="/images/rests/foodBand.jpg" alt="img: pizza">
+                    </div>
+                    <div class="products-card__description">
+                        <div class="products-card__description-row">
+                            <h4 class="products-card__description--title">Food Band</h4>
+                            <div class="products-card__description--badge">50 min</div>
+                        </div>
+                        <div class="products-card__description-row">
+                           <div class="products-card__description-info">
+                            <div class="products-card__description-info--rating">
+                                <img src="/images/items/star.svg" alt="icon: star">
+                                4.5
+                            </div>
+                            <div class="products-card__description-info--price">From $20</div>
+                            <div class="products-card__description-info--group">Pizza</div>
+
+                           </div>
+                        </div>                    </div>
+                </div>
+                <div class="products-card">
+                    <div class="products-card__image">
+<img src="/images/rests/zhad.jpg" alt="img: zhadina">
+                    </div>
+                    <div class="products-card__description">
+                        <div class="products-card__description-row">
+                            <h4 class="products-card__description--title">Zhadina</h4>
+                            <div class="products-card__description--badge">50 min</div>
+                        </div>
+                        <div class="products-card__description-row">
+                           <div class="products-card__description-info">
+                            <div class="products-card__description-info--rating">
+                                <img src="/images/items/star.svg" alt="icon: star">
+                                4.5
+                            </div>
+                            <div class="products-card__description-info--price">From $20</div>
+                            <div class="products-card__description-info--group">Sushi</div>
+
+                           </div>
+                        </div>                    </div>
+                </div>
+                <div class="products-card">
+                    <div class="products-card__image">
+<img src="/images/rests/pointFood.jpg" alt="img: pizza">
+                    </div>
+                    <div class="products-card__description">
+                        <div class="products-card__description-row">
+                            <h4 class="products-card__description--title">Food Point</h4>
+                            <div class="products-card__description--badge">50 min</div>
+                        </div>
+                        <div class="products-card__description-row">
+                           <div class="products-card__description-info">
+                            <div class="products-card__description-info--rating">
+                                <img src="/images/items/star.svg" alt="icon: star">
+                                4.5
+                            </div>
+                            <div class="products-card__description-info--price">From $20</div>
+                            <div class="products-card__description-info--group">Sushi</div>
+
+                           </div>
+                        </div>                    </div>
+                </div>
+                <div class="products-card">
+                    <div class="products-card__image">
+<img src="/images/rests/pizzaBurg.jpg" alt="img: pizza">
+                    </div>
+                    <div class="products-card__description">
+                        <div class="products-card__description-row">
+                            <h4 class="products-card__description--title">Pizza Burger</h4>
+                            <div class="products-card__description--badge">50 min</div>
+                        </div>
+                        <div class="products-card__description-row">
+                           <div class="products-card__description-info">
+                            <div class="products-card__description-info--rating">
+                                <img src="/images/items/star.svg" alt="icon: star">
+                                4.5
+                            </div>
+                            <div class="products-card__description-info--price">From $20</div>
+                            <div class="products-card__description-info--group">Burger</div>
+
+                           </div>
+                        </div>                    </div>
+                </div>
+            </div>
           </div>
         </section>
       </main>
+      <div class="cart-modal__overlay">
+        <div class="cart-modal">
+            <div class="cart-modal__header">
+<h2 class="cart-modal__header--title">Cart</h2>
+<span class="cart-modal__header--close">
+    <img src="/images/items/close.svg" alt="icon: close">
+</span>
+            </div>
+            <div class="cart-modal__body">
+                <div class="cart-item">
+                    <p class="cart-item__title">
+                        Eel roll
+                    </p>
+                    <div class="cart-item__controls">
+                            <div class="cart-item__controls--price">$8</div>
+                            <button class="btn btn-outline">-</button>
+                            <div class="cart-item__controls--count">1</div>
+                            <button class="btn btn-outline">+</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <p class="cart-item__title">
+                        Eel roll
+                    </p>
+                    <div class="cart-item__controls">
+                            <div class="cart-item__controls--price">$8</div>
+                            <button class="btn btn-outline">-</button>
+                            <div class="cart-item__controls--count">1</div>
+                            <button class="btn btn-outline">+</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="cart-modal__footer">
+                <div class="cart-modal__footer--price">
+                    $85
+                </div>
+                <div class="cart-modal__footer--controls">
+                    <button class="btn btn-primary">
+                        Order now
+                      </button>
+                      <button class="btn btn-outline">
+                        Cancel
+                      </button>
+                </div>
+                
+            </div>
+        </div>
+      </div>
       <footer class="footer">
         <div class="container">
           <div class="footer-box">
-            <div class="footer-logo logo">
+            <a href='index.html' class="footer-logo logo">
               <img src="/images/logo.png" alt="img: logo" />
-            </div>
+            </a>
             <div class="footer-nav">
               <ul>
                 <li>Restaurants</li>
